@@ -3,6 +3,7 @@ import MapContext from "../MapContext";
 import OLVectorLayer from "ol/layer/Vector";
 
 const VectorLayer = ({ source, style, zIndex = 0 }) => {
+	console.log(source)
 	const { map } = useContext(MapContext);
 
 	useEffect(() => {
