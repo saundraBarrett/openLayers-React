@@ -1,0 +1,38 @@
+@import "../../../variables";
+.executive-toolbar {
+    background-color: #f8f9fa;
+    .navbar-brand, .nav-item a {
+        color: black;
+    }
+    //background-color: orange;
+    .open-tools {
+        > div {
+            padding: .5em;
+            border: solid 1px #f2f3f3;
+            margin: .5em;
+            background: #f8f9fa;
+            box-shadow: $boxShadow;
+            color: black;
+            &.active {
+                border: $selectedBorder;
+            }
+            svg {
+                height: 50px;
+                width: 50px;
+            }
+        }
+        
+    }
+    .menu-bar {
+        background-color: $toolbarBackgroundColor;
+        .dropdown-item {
+            display: flex;
+            svg {
+                margin-right: 1em;
+                height: 1.5em;
+                width: 1.5em;
+            }
+        }
+    }
+    
+}

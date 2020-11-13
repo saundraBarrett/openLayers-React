@@ -1,0 +1,75 @@
+// Theme specific colors
+$darkBlue: #061325;
+$midBlue: #0e1c2f;
+$lightBlue: #2c7be5;
+$lightestBlue: #27bcfd;
+$grey: #344050;
+$textWhite: #d8e2ef;
+$white: #FFFFFF;
+
+// Theme settings
+$linkColor: $textWhite;
+$themePrimaryBg: $darkBlue;
+$themeSecondaryBg: $midBlue;
+$themeBorder: 1px solid $grey;
+
+.blue-theme {
+    background-color: $themeSecondaryBg !important;
+    .executive-toolbar {
+        .menu-bar {
+            background-color: $themePrimaryBg!important;
+        }
+        .open-tools {
+            background-color: lighten( $themeSecondaryBg, 5%) !important;
+        }
+        .navbar-brand, .nav-link {
+            color: $linkColor;
+        }
+        .form-control {
+            background-color: $themeSecondaryBg;
+            border: $themeSecondaryBg;
+            color: $linkColor;
+            &:hover {
+                background-color: $themeSecondaryBg;
+                color: $linkColor;
+            }
+        }
+    }
+    .tool-toolbar {
+        background: $midBlue;
+        color: $white!important;
+    }
+    .open-tools {
+        > div {
+            background: $themeSecondaryBg;
+            color: $textWhite;
+            box-shadow: none;
+            border: none;
+            &:hover {
+                background: lighten($themeSecondaryBg, 10%);
+                text-decoration: none;
+                color: $textWhite;
+            }
+            svg, g {
+                fill: white;
+            }
+           
+        }
+    }
+    .react-draggable {
+        background: $themePrimaryBg;
+        color: $white;  
+        border: solid 1px $themePrimaryBg!important;
+        .component {
+            .border {
+                border: solid 1px $themeSecondaryBg!important;
+            }
+            .selectable {
+                &:hover {
+                    background: $lightBlue;
+                }
+            }
+        }
+        
+    }
+}

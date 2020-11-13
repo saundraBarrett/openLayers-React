@@ -1,0 +1,60 @@
+@import "../../variables";
+
+.react-draggable {
+    background: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: $selectedBorder;
+    box-shadow: $boxShadow;
+    &[data-role='minimized'] {
+       display: none!important;
+    }
+    .component {
+        margin-top: $toolToolbarHeight + 10px;
+        padding: 0 1em;
+        .selectable {
+            &:hover{
+                background-color: $lightGrey;
+            }
+            &.active {
+                 background-color: $lightGrey;
+            }
+        }
+    }
+    div {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .tool-toolbar {
+        background: $toolbarBackgroundColor;
+        color: $toolbarColor;
+        position: fixed;
+        width: 100%;
+        font-size: .9em;
+        .d-flex {
+            height: $toolToolbarHeight / 3;
+            align-items: center;
+            &.control-bar {
+                .btn {
+                    color: inherit !important;
+                    background: none;
+                }
+            }
+            .btn {
+                &.btn-link {
+                    background: none;
+                }
+                padding: 0 .5em;
+                background-color: rgba(0,0,0,0.5);
+                border: none;
+            }
+            .form-control {
+                font-size: .9em;
+            }
+        }
+        .tool-label {
+            font-weight: bold;
+        }
+    }
+}

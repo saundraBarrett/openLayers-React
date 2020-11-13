@@ -21,6 +21,7 @@ const Map = ({ children, zoom, center }) => {
 		setMap(mapObject);
 
 		return () => mapObject.setTarget(undefined);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	// zoom change handler
@@ -28,6 +29,7 @@ const Map = ({ children, zoom, center }) => {
 		if (!map) return;
 
 		map.getView().setZoom(zoom);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [zoom]);
 
 	// center change handler
@@ -35,6 +37,7 @@ const Map = ({ children, zoom, center }) => {
 		if (!map) return;
 
 		map.getView().setCenter(center)
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [center])
 
 	return (
